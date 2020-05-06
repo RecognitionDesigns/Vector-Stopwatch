@@ -12,10 +12,10 @@ def make_text_image(text_to_draw, x, y, font=None):
     return text_image
 
 try:
-    font_file = ImageFont.truetype("Fonts/Arial.ttf", 30)
+    font_file = ImageFont.truetype("Arial.ttf", 30)
 except IOError:
     try:
-        font_file = ImageFont.truetype("Fonts/Arial.ttf", 27)
+        font_file = ImageFont.truetype("Arial.ttf", 27)
     except IOError:
         pass
 
@@ -65,13 +65,13 @@ with anki_vector.Robot() as robot:
         if (robot.touch.last_sensor_reading.is_being_touched):
             start_time = time.time()
             robot.behavior.set_eye_color(0.0, 1.0)
-            robot.audio.stream_wav_file("Sounds/Robot_blip.wav", 85)
+            robot.audio.stream_wav_file("Robot_blip.wav", 85)
             time.sleep(0.5)
             
             while True:
                 if (robot.touch.last_sensor_reading.is_being_touched):
                     end_time = time.time()
-                    robot.audio.stream_wav_file("Sounds/Robot_blip.wav", 85)
+                    robot.audio.stream_wav_file("Robot_blip.wav", 85)
                     robot.behavior.set_head_angle(degrees(30.0))
                     robot.behavior.set_lift_height(0.0)
                 
