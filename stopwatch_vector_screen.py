@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import anki_vector
 from anki_vector.util import degrees
 import time
